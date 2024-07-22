@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Initialize Swiper
 const swiper = new Swiper('#projects-carousel', {
     loop: true,
     slidesPerView: 1,
@@ -26,15 +25,12 @@ const swiper = new Swiper('#projects-carousel', {
     },
 });
 
-
-// Fetch GitHub pinned repos and dynamically add to the carousel
-fetch('https://api.github.com/users/Sam2368/pinned')
+fetch('https://api.github.com/users/adesinasam/pinned')
     .then(response => response.json())
     .then(data => {
         const projectsContainer = document.querySelector('#projects-carousel .swiper-wrapper');
 
         data.forEach(project => {
-            // Create the project slide
             const slide = document.createElement('div');
             slide.classList.add('swiper-slide', 'transform', 'hover:scale-110', 'transition-transform', 'duration-500', 'ease-in-out');
             slide.innerHTML = `
@@ -49,28 +45,34 @@ fetch('https://api.github.com/users/Sam2368/pinned')
             projectsContainer.appendChild(slide);
         });
 
-        // Re-initialize Swiper after adding slides
         swiper.update();
     })
-    .catch(error => console.error('Error fetching GitHub projects:', error)); // Handle error if API request fails
+    .catch(error => console.error('Error fetching GitHub projects:', error));
 
-// Scroll Animations using ScrollReveal
 ScrollReveal().reveal('.reveal', {
     delay: 300,
     distance: '50px',
     easing: 'ease-in-out',
 });
 
-// Parallax Effect using GSAP
-gsap.to("#background-video", {
-    yPercent: 20, // Adjust the percentage for desired parallax effect
+gsap.to("#hero", {
+    backgroundImage: "linear-gradient(to right, #6b21a8, #db2777)",
     ease: "none",
     scrollTrigger: {
-        trigger: "#hero", // Use the section ID where you want the parallax to occur
+        trigger: "#hero",
         start: "top top",
         end: "bottom top",
-        scrub: true, // Enable smooth scrubbing effect
+        scrub: true,
     }
 });
 
-// Add any other custom JavaScript you need here
+gsap.to(".text-transparent", {
+    colorTransition: "text-white",
+    ease: "none",
+    scrollTrigger: {
+        trigger: "#hero",
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+    }
+});
