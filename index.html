@@ -1,7 +1,129 @@
----
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
-author_profile: true
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adesina Samson - Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gradient-to-r from-blue-950 to-black text-white font-nunito">
+    <header class="fixed top-0 left-0 w-full z-50">
+      <nav class="py-4 px-8 md:px-16 lg:px-24 flex items-center justify-between bg-opacity-50 backdrop-blur-md bg-black">
+        <a href="#" class="text-2xl font-bold">Adesina.</a>
+        <ul class="hidden md:flex space-x-8 text-lg">
+          <li><a href="#about" class="hover:text-gray-300">About</a></li>
+          <li><a href="#skills" class="hover:text-gray-300">Skills</a></li>
+          <li><a href="#projects" class="hover:text-gray-300">Projects</a></li>
+          <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+        </ul>
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-white">
+            <span class="material-icons">menu</span>
+          </button>
+        </div>
+      </nav>
+      <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full bg-black bg-opacity-90 backdrop-blur-md">
+        <ul class="text-center py-8">
+          <li class="mb-4"><a href="#about" class="hover:text-gray-300 block py-2">About</a></li>
+          <li class="mb-4"><a href="#skills" class="hover:text-gray-300 block py-2">Skills</a></li>
+          <li class="mb-4"><a href="#projects" class="hover:text-gray-300 block py-2">Projects</a></li>
+          <li><a href="#contact" class="hover:text-gray-300 block py-2">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+    <section id="hero" class="relative min-h-screen flex items-center">
+      <video autoplay muted loop id="background-video" class="absolute inset-0 w-full h-full object-cover z-0">
+        <source src="background.mp4" type="video/mp4" />
+      </video>
+      <div class="relative z-10 container mx-auto px-8 md:px-16 lg:px-24 text-center">
+        <h1 class="text-4xl md:text-6xl lg:text-8xl font-extrabold mb-4">
+          Adesina <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">Samson</span>
+        </h1>
+        <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8">Python Developer | AI Fine-Tuning Enthusiast</p>
+        <a href="#projects" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-500 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-full shadow-lg">
+          View My Work
+        </a>
+      </div>
+    </section>
+    <section id="about" class="py-16 md:py-24 lg:py-32 bg-black">
+      <div class="container mx-auto px-8 md:px-16 lg:px-24">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center">About Me</h2>
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-8 md:mb-0">
+            <img src="profile.jpg" alt="Adesina Samson" class="rounded-lg shadow-lg mx-auto md:mx-0 w-64 md:w-96" />
+          </div>
+          <div class="md:w-1/2 px-4 md:px-8">
+            <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
+              I'm a passionate and skilled Python developer with a strong interest in the world of AI, particularly in fine-tuning large language models.
+              I thrive on crafting elegant and efficient solutions to complex problems, and I'm always eager to expand my knowledge and explore new technologies.
+              Based in Nigeria, I bring a unique perspective and a drive to create impactful solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="skills" class="py-16 md:py-24 lg:py-32 bg-gray-900">
+      <div class="container mx-auto px-8 md:px-16 lg:px-24">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center">My Skills</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-gray-800 rounded-lg shadow-lg p-6">
+            <h3 class="text-xl md:text-2xl font-bold mb-4">Python</h3>
+            <p class="text-gray-300">Proficient in Python programming language, utilizing it for scripting, data analysis, and back-end development.</p>
+          </div>
+          <div class="bg-gray-800 rounded-lg shadow-lg p-6">
+            <h3 class="text-xl md:text-2xl font-bold mb-4">AI Fine-Tuning</h3>
+            <p class="text-gray-300">Experienced in fine-tuning large language models for specific tasks, optimizing their performance and accuracy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="py-16 md:py-24 lg:py-32 bg-black">
+      <div class="container mx-auto px-8 md:px-16 lg:px-24">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center">Projects</h2>
+        <div id="projects-carousel" class="swiper">
+          <div class="swiper-wrapper">
+            </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="py-16 md:py-24 lg:py-32 bg-gray-900">
+      <div class="container mx-auto px-8 md:px-16 lg:px-24">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center">Contact Me</h2>
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-8 md:mb-0">
+            <ul class="text-lg md:text-xl text-gray-300">
+              <li class="mb-4">
+                <span class="material-icons mr-2">email</span> adesinasam68@gmail.com
+              </li>
+              <li class="mb-4">
+                <span class="material-icons mr-2">phone</span> +234 703 333 1149
+              </li>
+            </ul>
+          </div>
+          <div class="md:w-1/2">
+            <form action="#" method="POST" class="flex flex-col">
+              <input type="text" name="name" placeholder="Your Name" class="mb-4 px-4 py-3 rounded-lg bg-gray-800 text-white" required />
+              <input type="email" name="email" placeholder="Your Email" class="mb-4 px-4 py-3 rounded-lg bg-gray-800 text-white" required />
+              <textarea name="message" placeholder="Your Message" class="mb-4 px-4 py-3 rounded-lg bg-gray-800 text-white" rows="5" required></textarea>
+              <button type="submit" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-500 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-full shadow-lg">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="py-8 text-center text-gray-500">
+      <p>&copy; 2023 Adesina Samson. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
