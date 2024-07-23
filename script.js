@@ -1,7 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
+    const footer = document.querySelector('footer');
+footer.innerHTML += `
+  // <a href="https://www.linkedin.com/in/adesinasamson" target="_blank" class="text-white">LinkedIn</a>
+  <a href="https://twitter.com/@adesinasam68" target="_blank" class="text-white">Twitter</a>`;
+    const contactForm = document.querySelector('form');
+contactForm.addEventListener('submit', (event) => {
+  const nameField = contactForm.querySelector('[name="name"]');
+  const emailField = contactForm.querySelector('[name="email"]');
+  const messageField = contactForm.querySelector('[name="message"]');
 
+  if (!nameField.value || !emailField.value || !messageField.value) {
+    event.preventDefault();
+    alert('Please fill out all fields.');
+  }
+});
     mobileMenuButton.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
     });
