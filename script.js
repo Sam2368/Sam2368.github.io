@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const mobileMenu = document.getElementById('mobile-menu');
     const footer = document.querySelector('footer');
 footer.innerHTML += `
-  // <a href="https://www.linkedin.com/in/adesinasamson" target="_blank" class="text-white">LinkedIn</a>
   <a href="https://twitter.com/@adesinasam68" target="_blank" class="text-white">Twitter</a>`;
     const contactForm = document.querySelector('form');
 contactForm.addEventListener('submit', (event) => {
